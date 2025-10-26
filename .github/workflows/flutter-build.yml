@@ -16,7 +16,7 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.10.0'
+        flutter-version: '3.13.0'  # You can change this to match your Flutter version
 
     - name: Install dependencies
       run: flutter pub get
@@ -24,7 +24,7 @@ jobs:
     - name: Build APK
       run: flutter build apk --release
 
-    - name: Upload APK to GitHub Artifacts
+    - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
         name: ShiskarStudio-APK
